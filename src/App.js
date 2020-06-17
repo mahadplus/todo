@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './App.css'
-import store from './store'
-import {observer} from 'mobx-react'
+import { observer } from 'mobx-react'
+import TodoEntry from './components/TodoEntry'
+import TodoItems from './components/TodoItems'
 
 
 @observer
-function App() {
-  return (
-    <div className="App">
-      {store.time.toLocaleTimeString()}
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <div id="todoapp" className="todoapp">
+          <TodoEntry />
+          <TodoItems/>
+        </div>
+      </div>
+
+    );
+
+  }
+
+
 }
 
 export default App;
