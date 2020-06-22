@@ -6,7 +6,7 @@ export default class TodoModel {
     @observable title
     @observable completed
 
-    constractor(store , title , completed , id){
+    constructor(store , title , completed , id){
         this.id = id 
         this.title = title 
         this.completed = completed
