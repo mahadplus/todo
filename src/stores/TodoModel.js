@@ -9,7 +9,7 @@ export default class TodoModel {
     constractor(store , title , completed , id){
         this.id = id 
         this.title = title 
-        this.complited = completed
+        this.completed = completed
         this.store = store
     }
 

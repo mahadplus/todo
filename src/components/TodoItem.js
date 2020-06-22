@@ -1,14 +1,20 @@
 import React, { Component } from "react"
 
 
-class TodoItems extends Component {
+class TodoItem extends Component {
     render() {
         const {todo} = this.props
         return (
             <li className={todo.completed ? 'completed' : ''}>
                 <div className="view">
-                    <input type="checkbox" className="toggle" value="on" checked={todo.completed} />
+                    <input 
+                        type="checkbox" 
+                        className="toggle" 
+                        value="on" 
+                        checked={todo.completed} 
+                    />
                         <label>{todo.title}</label>
+                        {console.log("a:"+todo.title)}
                         <button className="destry" />
                 </div>
             </li>
@@ -16,4 +22,4 @@ class TodoItems extends Component {
         )
     }
 }
-export default TodoItems
+export default TodoItem
